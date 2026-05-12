@@ -1,0 +1,279 @@
+/* GOOGLE FONT:
+Poppins + Dancing Script
+*/
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffdf5;
+    color: #1e1e1e;
+}
+
+/* HEADER */
+
+header{
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+
+/* NAV */
+
+.header-nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.header-nav a:hover{
+    color: white;
+}
+
+/* MAIN */
+
+main{
+    padding: 40px;
+    text-align: center;
+}
+
+.titulo-home{
+    font-size: 55px;
+    color: #ffb300;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.parrafo{
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+/* SERVICIOS */
+
+.servicios h2{
+    font-size: 45px;
+    color: #ffb300;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.card-servicio{
+    background-color: white;
+    width: 280px;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    vertical-align: top;
+}
+
+.card-servicio img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-servicio h3{
+    margin-top: 15px;
+    color: black;
+    font-size: 22px;
+}
+
+.card-servicio p{
+    margin: 15px 0;
+    font-size: 20px;
+    color: #ffb300;
+    font-weight: bold;
+}
+
+.card-servicio button{
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.card-servicio button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* CONTACTO */
+
+.contacto{
+    text-align: center;
+    padding: 20px;
+}
+
+.contacto h1{
+    color: #ffb300;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.contacto form{
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.contacto input,
+.contacto textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contacto textarea{
+    height: 120px;
+    resize: none;
+}
+
+.contacto button{
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contacto button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #ffcc00;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer-list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.footer-list img{
+    width: 35px;
+}
+/* RESEÑAS */
+
+.resenas{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.resenas h2{
+    font-size: 45px;
+    color: #ffb300;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.grid-resenas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resena{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.resena p{
+    margin-bottom: 15px;
+}
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-resenas{
+        grid-template-columns: 1fr;
+    }
+
+    .card-servicio{
+        width: 90%;
+    }
+
+    .contacto form{
+        width: 90%;
+    }
+    .contacto h1{
+        font-size: 38px;
+    }
+
+    .contacto form{
+        padding: 20px;
+    }
+
+    .contacto input,
+    .contacto textarea,
+    .contacto button{
+        font-size: 16px;
+    }
+
+}
