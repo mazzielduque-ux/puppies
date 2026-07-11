@@ -1,279 +1,381 @@
-/* GOOGLE FONT:
-Poppins + Dancing Script
-*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* RESET */
+:root {
+    --amarillo: #ffc928;
+    --amarillo-claro: #fff4c9;
+    --naranja: #f28b30;
+    --marron: #5d4037;
+    --texto: #3f3a38;
+    --blanco: #ffffff;
+    --fondo: #fffaf1;
+    --sombra: 0 8px 24px rgba(93, 64, 55, 0.12);
+}
 
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* BODY */
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #fffdf5;
-    color: #1e1e1e;
+html {
+    scroll-behavior: smooth;
 }
 
-/* HEADER */
+body {
+    color: var(--texto);
+    background-color: var(--fondo);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
 
-header{
-    background-color: #ffcc00;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 12px 7%;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 12px rgba(93, 64, 55, 0.1);
 }
 
-.logo{
-    color: black;
+.logo {
+    color: var(--naranja);
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
     text-decoration: none;
-    font-size: 40px;
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
 }
 
-/* NAV */
-
-.header-nav ul{
+.header-nav ul,
+.footer-list {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-.header-nav a{
+.header-nav a {
+    color: var(--marron);
+    font-weight: 600;
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: 0.3s;
 }
 
-.header-nav a:hover{
-    color: white;
+.header-nav a:hover {
+    color: var(--naranja);
 }
 
-/* MAIN */
+#contador-carrito {
+    display: inline-grid;
+    min-width: 22px;
+    height: 22px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--naranja);
+    color: var(--blanco);
+    font-size: 0.75rem;
+}
 
-main{
-    padding: 40px;
+.hero {
+    display: grid;
+    min-height: 520px;
+    place-items: center;
+    align-content: center;
+    padding: 80px 20px;
+    color: var(--blanco);
     text-align: center;
+    background: linear-gradient(135deg, #f29a3f, #f4b942 55%, #f8d36e);
 }
 
-.titulo-home{
-    font-size: 55px;
-    color: #ffb300;
-    margin-bottom: 20px;
-    font-family: 'Dancing Script', cursive;
+.titulo-home {
+    max-width: 850px;
+    margin-bottom: 14px;
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    font-weight: 700;
 }
 
-.parrafo{
+.parrafo {
     max-width: 700px;
-    margin: auto;
-    margin-bottom: 50px;
-    font-size: 18px;
+    margin-bottom: 28px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-/* SERVICIOS */
+.hero .btn {
+    padding: 12px 28px;
+    border: 0;
+    border-radius: 999px;
+    color: var(--marron);
+    font-weight: 700;
+    box-shadow: var(--sombra);
+}
 
-.servicios h2{
-    font-size: 45px;
-    color: #ffb300;
+section {
+    padding: 76px 7%;
+}
+
+section h2 {
     margin-bottom: 30px;
-    font-family: 'Dancing Script', cursive;
-}
-
-.card-servicio{
-    background-color: white;
-    width: 280px;
-    display: inline-block;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    vertical-align: top;
-}
-
-.card-servicio img{
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.card-servicio h3{
-    margin-top: 15px;
-    color: black;
-    font-size: 22px;
-}
-
-.card-servicio p{
-    margin: 15px 0;
-    font-size: 20px;
-    color: #ffb300;
-    font-weight: bold;
-}
-
-.card-servicio button{
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.card-servicio button:hover{
-    background-color: black;
-    color: white;
-}
-
-/* CONTACTO */
-
-.contacto{
+    color: var(--marron);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
     text-align: center;
-    padding: 20px;
 }
 
-.contacto h1{
-    color: #ffb300;
-    font-size: 50px;
-    margin-bottom: 30px;
-    font-family: 'Dancing Script', cursive;
+.productos {
+    background: var(--blanco);
 }
 
-.contacto form{
-    background-color: white;
-    max-width: 500px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-}
-
-.contacto input,
-.contacto textarea{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contacto textarea{
-    height: 120px;
-    resize: none;
-}
-
-.contacto button{
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.contacto button:hover{
-    background-color: black;
-    color: white;
-}
-
-/* FOOTER */
-
-footer{
-    background-color: #ffcc00;
-    color: black;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.footer-list{
+.filtros {
     display: flex;
+    max-width: 850px;
+    gap: 16px;
+    margin: 0 auto 34px;
+}
+
+.filtros input,
+.filtros select,
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2d8cf;
+    border-radius: 10px;
+    outline: none;
+    color: var(--texto);
+    font: inherit;
+}
+
+.filtros input:focus,
+.filtros select:focus,
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: var(--naranja);
+    box-shadow: 0 0 0 3px rgba(242, 139, 48, 0.18);
+}
+
+/* Flexbox para las tarjetas de productos */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    list-style: none;
-    margin-top: 15px;
+    gap: 24px;
 }
 
-.footer-list img{
-    width: 35px;
+/* Estas tarjetas se crearán desde script.js usando <article> */
+.producto {
+    flex: 1 1 230px;
+    max-width: 280px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
 }
-/* RESEÑAS */
 
-.resenas{
-    margin-top: 60px;
+.producto:hover {
+    transform: translateY(-4px);
+}
+
+.producto img {
+    width: 100%;
+    height: 210px;
+    padding: 16px;
+    object-fit: contain;
+    background: #fffdf8;
+}
+
+.producto h3,
+.producto p {
+    margin: 0 18px 12px;
+}
+
+.producto h3 {
+    color: var(--marron);
+    font-size: 1.05rem;
+}
+
+.producto button,
+.contacto button {
+    margin: 0 18px 18px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--amarillo);
+    color: var(--marron);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.producto button:hover,
+.contacto button:hover {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.carrito {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+#items-carrito {
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.carrito-vacio {
+    padding: 26px;
     text-align: center;
 }
 
-.resenas h2{
-    font-size: 45px;
-    color: #ffb300;
-    margin-bottom: 30px;
-    font-family: 'Dancing Script', cursive;
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0e7de;
 }
 
-.grid-resenas{
+.item-carrito:last-child {
+    border-bottom: 0;
+}
+
+.item-carrito button {
+    padding: 7px 11px;
+    border: 0;
+    border-radius: 7px;
+    background: #f8d7da;
+    color: #842029;
+    cursor: pointer;
+}
+
+.total-carrito {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-carrito h3 {
+    color: var(--marron);
+}
+
+/* Grid para las reseñas */
+.resenas {
+    background-color: var(--amarillo-claro);
+}
+
+.grid-resenas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.resena {
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.resena p {
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.resena h4 {
+    color: var(--naranja);
+    text-align: right;
+}
+
+.contacto {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contacto form {
+    display: grid;
+    gap: 16px;
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.contacto textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contacto button {
+    width: max-content;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    padding: 25px 7%;
+    background: var(--marron);
+    color: var(--blanco);
 }
 
-.resena{
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+.footer-list {
+    gap: 14px;
 }
 
-.resena p{
-    margin-bottom: 15px;
+.footer-list img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
-/* RESPONSIVE */
 
-@media (max-width: 768px){
+.footer-list img:hover {
+    transform: scale(1.1);
+}
 
-    header{
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
-        gap: 15px;
+        padding: 12px 5%;
     }
 
-    .header-nav ul{
-        flex-direction: column;
-        align-items: center;
+    .header-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
     }
 
-    .grid-resenas{
+    section {
+        padding: 58px 5%;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .grid-resenas {
         grid-template-columns: 1fr;
     }
 
-    .card-servicio{
-        width: 90%;
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 430px;
     }
 
-    .contacto form{
-        width: 90%;
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .contacto h1{
-        font-size: 38px;
-    }
-
-    .contacto form{
-        padding: 20px;
-    }
-
-    .contacto input,
-    .contacto textarea,
-    .contacto button{
-        font-size: 16px;
-    }
-
 }
