@@ -24,7 +24,7 @@ El sitio está pensado para mostrar información y servicios relacionados con el
 
 ## Link del proyecto
 
-https://github.com/mazzielduque-ux/puppies.git
+https://mazzielduque-ux.github.io/puppies/
 
 ## Autor
 
